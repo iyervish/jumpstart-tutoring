@@ -384,9 +384,9 @@ export default function Home() {
               role="Parent of 2nd grader"
             />
             <TestimonialCard
-              quote="Mrs. O'Connor doesn't just teach math; she genuinely cares about her students' understanding and growth. Her tailored approach and engaging teaching methods have made a significant impact on our daughter, instilling confidence and a stronger grasp of mathematical concepts."
-              author="Jennifer K."
-              role="Parent of 3rd grader"
+              quote="We truly appreciate the personalized attention and commitment to each session. It’s clear she cares deeply about our daughter’s success, and we highly recommend Mrs. O’Connor to any family looking for a dedicated and adaptable tutor."
+              author="Camila S."
+              role="Parent of 4th and 6th grader"
             />
           </div>
         </div>
