@@ -15,10 +15,10 @@ export default function Home() {
       <section className="relative w-full min-h-[85vh] flex items-center">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/placeholder.svg?height=1080&width=1920"
+            src="/hero.png?height=1080&width=1920"
             alt="Students learning"
             fill
-            className="object-cover brightness-[0.85]"
+            className="object-cover brightness-[0.5]"
             priority
           />
         </div>
@@ -92,7 +92,7 @@ export default function Home() {
               <div className="grid md:grid-cols-2 gap-8 items-center">
                 <div>
                   <Image
-                    src="/placeholder.svg?height=600&width=600"
+                    src="/one-on-one.png?height=600&width=600"
                     alt="One-on-one tutoring"
                     width={600}
                     height={600}
@@ -139,7 +139,7 @@ export default function Home() {
               <div className="grid md:grid-cols-2 gap-8 items-center">
                 <div>
                   <Image
-                    src="/placeholder.svg?height=600&width=600"
+                    src="/test-prep.png?height=600&width=600"
                     alt="Test preparation"
                     width={600}
                     height={600}
@@ -184,7 +184,7 @@ export default function Home() {
               <div className="grid md:grid-cols-2 gap-8 items-center">
                 <div>
                   <Image
-                    src="/placeholder.svg?height=600&width=600"
+                    src="/small-group.png?height=600&width=600"
                     alt="Small group instruction"
                     width={600}
                     height={600}
@@ -250,7 +250,7 @@ export default function Home() {
             <TutorCard
               name="Michelle Ward"
               title="CEO & Lead Educator"
-              imageSrc="/placeholder.svg?height=400&width=400"
+              imageSrc="/michelle-ward.jpg?height=400&width=400"
               subjects={["Reading", "Writing", "ESOL"]}
               experience="24+ years"
               bio="Experienced educator with 24 years at Fairfax County Public Schools and founder of Jump Start Advanced Academic LLC."
@@ -258,7 +258,7 @@ export default function Home() {
             <TutorCard
               name="Kayla Graham"
               title="Co-Chair & Educator"
-              imageSrc="/placeholder.svg?height=400&width=400"
+              imageSrc="/kayla-graham.jpg?height=400&width=400"
               subjects={["Reading", "Writing", "Math"]}
               experience="5+ years"
               bio="Current 6th grade reading & writing teacher with expertise in student engagement and educational performance analysis."
@@ -266,7 +266,7 @@ export default function Home() {
             <TutorCard
               name="Mia Wallace"
               title="Mathematics & Spanish Specialist"
-              imageSrc="/placeholder.svg?height=400&width=400"
+              imageSrc="/mia-wallace.jpg?height=400&width=400"
               subjects={["Mathematics", "Spanish", "SAT Prep"]}
               experience="5+ years"
               bio="UVA graduate with a Master's in Education from GWU, specializing in mathematics up to calculus and Spanish language instruction."
@@ -426,7 +426,7 @@ export default function Home() {
               </div>
             </div>
             <div className="relative h-[400px] rounded-2xl overflow-hidden">
-              <Image src="/placeholder.svg?height=800&width=800" alt="Student success" fill className="object-cover" />
+              <Image src="/jump-start.png?height=800&width=800" alt="Student success" fill className="object-cover" />
             </div>
           </div>
         </div>

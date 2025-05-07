@@ -157,7 +157,7 @@ export default function ServicesPage() {
             </div>
             <div className="relative h-[500px] rounded-2xl overflow-hidden">
               <Image
-                src="/placeholder.svg?height=1000&width=1000"
+                src="/one-on-one.png?height=1000&width=1000"
                 alt="One-on-one tutoring"
                 fill
                 className="object-cover"
@@ -173,7 +173,7 @@ export default function ServicesPage() {
           <div className="grid gap-10 lg:grid-cols-2 lg:gap-16 items-center">
             <div className="relative h-[500px] rounded-2xl overflow-hidden order-last lg:order-first">
               <Image
-                src="/placeholder.svg?height=1000&width=1000"
+                src="/test-prep.png?height=1000&width=1000"
                 alt="Test preparation"
                 fill
                 className="object-cover"
@@ -293,7 +293,7 @@ export default function ServicesPage() {
             </div>
             <div className="relative h-[500px] rounded-2xl overflow-hidden">
               <Image
-                src="/placeholder.svg?height=1000&width=1000"
+                src="/small-group.png?height=1000&width=1000"
                 alt="Small group instruction"
                 fill
                 className="object-cover"

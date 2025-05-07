@@ -30,7 +30,7 @@ export default function TutorsPage() {
             <TutorProfile
               name="Michelle Ward"
               title="Experienced Educator | CEO | Student-Centered Instruction"
-              imageSrc="/placeholder.svg?height=400&width=400"
+              imageSrc="/michelle-ward.jpg?height=400&width=400"
               experience={[
                 "Current ESOL Teacher (Grades 4-6)",
                 "6th Grade Teacher | 21 Years at Fairfax County Public Schools",
@@ -56,7 +56,7 @@ export default function TutorsPage() {
             <TutorProfile
               name="Kayla Graham"
               title="Experienced Educator | Co-Chair | Student Engagement & Instruction"
-              imageSrc="/placeholder.svg?height=400&width=400"
+              imageSrc="/kayla-graham.jpg?height=400&width=400"
               experience={[
                 "Current 6th grade reading & writing teacher at Fairfax County Public Schools (2020-Present)",
                 "Co-Chair and Tutor at Jump Start Advanced Academic LLC (2023-Present)",
@@ -75,7 +75,7 @@ export default function TutorsPage() {
             <TutorProfile
               name="Mia Wallace"
               title="Experienced Educator | Mathematics & Spanish Specialist"
-              imageSrc="/placeholder.svg?height=400&width=400"
+              imageSrc="/mia-wallace.jpg?height=400&width=400"
               experience={[
                 "Five years of teaching experience",
                 "Specializes in mathematics up to calculus",
@@ -132,7 +132,7 @@ export default function TutorsPage() {
             </div>
             <div className="mx-auto lg:mx-0">
               <Image
-                src="/placeholder.svg?height=550&width=550"
+                src="/tutors.png?height=550&width=550"
                 alt="Our tutors"
                 width={550}
                 height={550}
