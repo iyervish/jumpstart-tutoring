@@ -231,6 +231,69 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Summer Workshop */}
+      <section className="w-full py-12 md:py-24 lg:py-32 bg-cream">
+        <div className="container px-4 md:px-6">
+          <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
+            <div className="space-y-2">
+              <Badge className="mb-2 bg-coral text-white">Enrolling Now</Badge>
+              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-navy">
+                Summer Workshop
+              </h2>
+              <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl/relaxed">
+                Specialized test preparation workshops for COGAT and NNAT
+              </p>
+            </div>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            <div className="bg-white p-8 rounded-2xl shadow-lg space-y-6">
+              <div className="space-y-2">
+                <h3 className="text-2xl font-bold text-navy">Week 1: COGAT Grade 2</h3>
+                <p className="text-lg font-medium text-coral">July 7-10, 9am-12pm</p>
+              </div>
+              <p className="text-muted-foreground">
+                The COGAT assesses reasoning and problem-solving abilities in three key areas, which are referred to as batteries: 
+                Verbal (language), Quantitative (math), and Nonverbal (shapes and figures). 
+                <br />
+                <br />
+                During this summer course students will 
+                play games, learn analogies, and work on problems that include math, shapes and figures. They will learn test taking 
+                strategies to help them feel more confident with taking any test.
+              </p>
+            </div>
+
+            <div className="bg-white p-8 rounded-2xl shadow-lg space-y-6">
+              <div className="space-y-2">
+                <h3 className="text-2xl font-bold text-navy">Week 2: NNAT Grade 1</h3>
+                <p className="text-lg font-medium text-coral">August 4-8, 9am-12pm</p>
+              </div>
+              <p className="text-muted-foreground">
+                The NNAT assesses a child's thinking and reasoning abilities as opposed to what he or she has learned in school. 
+                In other words, the NNAT assesses how the student thinks versus what the student knows. 
+                <br />
+                <br />
+                During this course we challenge students to think outside the box and use problem solving strategies to solve unfamiliar puzzles and 
+                solve complex patterns. They will learn test taking strategies to help them feel more confident with taking any test. 
+                Please understand that we do not teach the test.
+              </p>
+            </div>
+          </div>
+
+          <div className="mt-12 text-center">
+            <p className="text-lg font-medium text-navy mb-4">
+              Fee: $650 + $20 for required book (each week)
+            </p>
+            <Link href="/contact">
+              <Button size="lg" className="h-11 px-8 bg-coral hover:bg-coral/90 text-white">
+                Register Now
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Button>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* Featured Tutors */}
       <section className="w-full py-12 md:py-24 lg:py-32 bg-cream">
         <div className="container px-4 md:px-6">
@@ -384,7 +447,7 @@ export default function Home() {
               role="Parent of 2nd grader"
             />
             <TestimonialCard
-              quote="We truly appreciate the personalized attention and commitment to each session. It’s clear she cares deeply about our daughter’s success, and we highly recommend Mrs. O’Connor to any family looking for a dedicated and adaptable tutor."
+              quote="We truly appreciate the personalized attention and commitment to each session. It's clear she cares deeply about our daughter's success, and we highly recommend Mrs. O'Connor to any family looking for a dedicated and adaptable tutor."
               author="Camila S."
               role="Parent of 4th and 6th grader"
             />
