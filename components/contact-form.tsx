@@ -12,6 +12,8 @@ import { CheckCircle } from "lucide-react"
 
 export default function ContactForm() {
   const [isSubmitted, setIsSubmitted] = useState(false)
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [submitError, setSubmitError] = useState<string | null>(null)
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -30,22 +32,43 @@ export default function ContactForm() {
     setFormData((prev) => ({ ...prev, [name]: value }))
   }
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    // Here you would typically send the form data to your backend
-    console.log("Form submitted:", formData)
-    // Show success message
-    setIsSubmitted(true)
-    // Reset form
-    setFormData({
-      name: "",
-      email: "",
-      phone: "",
-      studentGrade: "",
-      subject: "",
-      message: "",
-    })
-  }
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitError(null);
+
+    try {
+      const response = await fetch('/api/send-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (!response.ok) {
+        const errorData = await response.json();
+        throw new Error(errorData.error || 'Failed to send message');
+      }
+
+      // Show success message
+      setIsSubmitted(true);
+      // Reset form
+      setFormData({
+        name: "",
+        email: "",
+        phone: "",
+        studentGrade: "",
+        subject: "",
+        message: "",
+      });
+    } catch (error: any) {
+      console.error("Form submission error:", error);
+      setSubmitError(error.message || 'An unexpected error occurred. Please try again.');
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   return (
     <div className="space-y-4">
@@ -58,7 +81,10 @@ export default function ContactForm() {
           <p className="mt-2 text-green-700">
             We've received your inquiry and will get back to you as soon as possible.
           </p>
-          <Button className="mt-4" variant="outline" onClick={() => setIsSubmitted(false)}>
+          <Button className="mt-4" variant="outline" onClick={() => {
+            setIsSubmitted(false);
+            setSubmitError(null);
+          }}>
             Send another message
           </Button>
         </div>
@@ -74,6 +100,7 @@ export default function ContactForm() {
                 required
                 value={formData.name}
                 onChange={handleChange}
+                disabled={isSubmitting}
               />
             </div>
             <div className="space-y-2">
@@ -86,6 +113,7 @@ export default function ContactForm() {
                 required
                 value={formData.email}
                 onChange={handleChange}
+                disabled={isSubmitting}
               />
             </div>
           </div>
@@ -98,6 +126,7 @@ export default function ContactForm() {
                 placeholder="Your phone number"
                 value={formData.phone}
                 onChange={handleChange}
+                disabled={isSubmitting}
               />
             </div>
             <div className="space-y-2">
@@ -106,6 +135,7 @@ export default function ContactForm() {
                 name="studentGrade"
                 onValueChange={(value) => handleSelectChange("studentGrade", value)}
                 value={formData.studentGrade}
+                disabled={isSubmitting}
               >
                 <SelectTrigger>
                   <SelectValue placeholder="Select grade" />
@@ -135,6 +165,7 @@ export default function ContactForm() {
               name="subject"
               onValueChange={(value) => handleSelectChange("subject", value)}
               value={formData.subject}
+              disabled={isSubmitting}
             >
               <SelectTrigger>
                 <SelectValue placeholder="Select subject" />
@@ -158,10 +189,18 @@ export default function ContactForm() {
               rows={5}
               value={formData.message}
               onChange={handleChange}
+              disabled={isSubmitting}
             />
           </div>
-          <Button type="submit" className="w-full">
-            Send Message
+
+          {submitError && (
+            <div className="rounded-md bg-red-50 p-3 text-sm text-red-700">
+              <p>{submitError}</p>
+            </div>
+          )}
+
+          <Button type="submit" className="w-full" disabled={isSubmitting}>
+            {isSubmitting ? 'Sending...' : 'Send Message'}
           </Button>
         </form>
       )}
