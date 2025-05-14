@@ -189,7 +189,7 @@ export default function ServicesPage() {
               <br />
               COGAT session July 7-10 (9am-12pm)
               <br />
-              NNAT session August 4-8 (9am-12pm)
+              NNAT session August 4-7 (9am-12pm)
               </p>
               <div className="space-y-6">
                 <div className="space-y-3">
@@ -317,7 +317,7 @@ export default function ServicesPage() {
           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             <PricingCard
               title="One-on-One Tutoring"
-              price="$80"
+              price="$90"
               duration="per hour"
               description="Personalized instruction with a certified teacher"
               features={["Customized learning plan", "Progress reports", "Flexible scheduling", "All K-12 subjects"]}
@@ -327,7 +327,7 @@ export default function ServicesPage() {
             />
             <PricingCard
               title="Small Group Sessions"
-              price="$45"
+              price="Varies"
               duration="per hour, per student"
               description="Collaborative learning with 2-4 students"
               features={["Peer interaction", "Cost-effective option", "Personalized attention", "Similar grade levels"]}

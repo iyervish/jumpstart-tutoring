@@ -266,7 +266,7 @@ export default function Home() {
             <div className="bg-white p-8 rounded-2xl shadow-lg space-y-6">
               <div className="space-y-2">
                 <h3 className="text-2xl font-bold text-navy">Week 2: NNAT Grade 1</h3>
-                <p className="text-lg font-medium text-coral">August 4-8, 9am-12pm</p>
+                <p className="text-lg font-medium text-coral">August 4-7, 9am-12pm</p>
               </div>
               <p className="text-muted-foreground">
                 The NNAT assesses a child's thinking and reasoning abilities as opposed to what he or she has learned in school. 
@@ -316,7 +316,7 @@ export default function Home() {
               imageSrc="/michelle-ward.jpg?height=400&width=400"
               subjects={["Reading", "Writing", "ESOL"]}
               experience="24+ years"
-              bio="Experienced educator with 24 years at Fairfax County Public Schools and founder of Jump Start Advanced Academic LLC."
+              bio="Experienced educator with 29 years at Fairfax County Public Schools and founder of Jump Start Advanced Academic LLC."
             />
             <TutorCard
               name="Kayla Graham"
