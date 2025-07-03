@@ -19,7 +19,7 @@ export default function ContactForm() {
     email: "",
     phone: "",
     studentGrade: "",
-    subject: "",
+    referralSource: "",
     message: "",
   })
 
@@ -59,7 +59,7 @@ export default function ContactForm() {
         email: "",
         phone: "",
         studentGrade: "",
-        subject: "",
+        referralSource: "",
         message: "",
       });
     } catch (error: any) {
@@ -160,24 +160,15 @@ export default function ContactForm() {
             </div>
           </div>
           <div className="space-y-2">
-            <Label htmlFor="subject">Subject</Label>
-            <Select
-              name="subject"
-              onValueChange={(value) => handleSelectChange("subject", value)}
-              value={formData.subject}
+            <Label htmlFor="referralSource">How did you hear about us?</Label>
+            <Input
+              id="referralSource"
+              name="referralSource"
+              placeholder="e.g. Google, Facebook, Friend, etc."
+              value={formData.referralSource}
+              onChange={handleChange}
               disabled={isSubmitting}
-            >
-              <SelectTrigger>
-                <SelectValue placeholder="Select subject" />
-              </SelectTrigger>
-              <SelectContent>
-                <SelectItem value="reading">Reading</SelectItem>
-                <SelectItem value="writing">Writing</SelectItem>
-                <SelectItem value="math">Math</SelectItem>
-                <SelectItem value="test-prep">Test Preparation</SelectItem>
-                <SelectItem value="other">Other</SelectItem>
-              </SelectContent>
-            </Select>
+            />
           </div>
           <div className="space-y-2">
             <Label htmlFor="message">Message</Label>
