@@ -6,7 +6,7 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 export async function POST(req: NextRequest) {
   try {
     const formData = await req.json();
-    const { name, email, phone, studentGrade, subject, message } = formData;
+    const { name, email, phone, studentGrade, referralSource, message } = formData;
 
     if (!name || !email || !message) {
       return NextResponse.json({ error: 'Missing required fields' }, { status: 400 });
@@ -15,14 +15,14 @@ export async function POST(req: NextRequest) {
     const { data, error } = await resend.emails.send({
       from: 'Jump Start Contact Form <onboarding@resend.dev>', // Replace with your "from" email if you have a custom domain set up in Resend
       to: ['iyervish@gmail.com', 'jumpstartwithus@gmail.com'],
-      subject: `New Contact Form Submission: ${subject || 'General Inquiry'}`,
+      subject: `New Contact Form Submission`,
       html: `
         <h1>New Contact Form Submission</h1>
         <p><strong>Name:</strong> ${name}</p>
         <p><strong>Email:</strong> ${email}</p>
         <p><strong>Phone:</strong> ${phone || 'Not provided'}</p>
         <p><strong>Student Grade:</strong> ${studentGrade || 'Not provided'}</p>
-        <p><strong>Subject:</strong> ${subject || 'Not provided'}</p>
+        <p><strong>How did you hear about us:</strong> ${referralSource || 'Not provided'}</p>
         <p><strong>Message:</strong></p>
         <p>${message}</p>
       `,
